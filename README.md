@@ -1,8 +1,7 @@
 ubox
 ====
 
-Ansible playbook for Ubuntu/Node.js app server provisioning
-+ Vagrantfile and playbook for development
+Ansible playbook for Ubuntu/Node.js app server provisioning + Vagrantfile and playbook for development
 
 ### What inside
 
