@@ -3,6 +3,7 @@
   apt: name={{ item }} state=present
   sudo: yes
   with_items:
+    - apt-transport-https
     - curl
     - vim
     - libxml2

@@ -5,3 +5,5 @@
   become: yes
 - include: nodejs.yml
   become: yes
+- include: lua.yml
+  become: yes

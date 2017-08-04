@@ -5,6 +5,7 @@
   template: src=templates/nodejs.list dest=/etc/apt/sources.list.d/nodejs.list owner=root mode=666
 
 - apt: name=nodejs state=present update_cache=yes
+  ignore_errors: yes
 
 - apt_key: url=https://dl.yarnpkg.com/debian/pubkey.gpg state=present
 
