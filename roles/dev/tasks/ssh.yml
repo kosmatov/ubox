@@ -1,0 +1,7 @@
+---
+- copy: src=~/.ssh/{{ item }} dest=~/.ssh/{{ item }} mode=0600 force=no
+  with_items:
+    - id_rsa
+    - id_rsa.pub
+    - config
+  ignore_errors: true

@@ -1,0 +1,5 @@
+hosts
+*.retry
+*.log
+*.sw?
+.vagrant

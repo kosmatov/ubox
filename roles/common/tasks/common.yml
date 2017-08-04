@@ -1,0 +1,23 @@
+---
+- name: Install base packages
+  apt: name={{ item }} state=present
+  sudo: yes
+  with_items:
+    - curl
+    - vim
+    - libxml2
+    - libxml2-dev
+    - libxslt-dev
+    - libconfig-dev
+    - libssl-dev
+    - libevent-dev
+    - libpython-dev
+    - zsh
+    - git
+
+- name: Detect ZSH path
+  shell: which zsh
+  register: which_zsh
+
+- name: Change user shell
+  user: name={{ user }} shell={{ which_zsh.stdout }}

@@ -1,0 +1,14 @@
+---
+- apt_key: url=https://deb.nodesource.com/gpgkey/nodesource.gpg.key state=present
+
+- name: Add nodejs repository
+  template: src=templates/nodejs.list dest=/etc/apt/sources.list.d/nodejs.list owner=root mode=666
+
+- apt: name=nodejs state=present update_cache=yes
+
+- apt_key: url=https://dl.yarnpkg.com/debian/pubkey.gpg state=present
+
+- name: Add yarn repository
+  template: src=templates/yarn.list dest=/etc/apt/sources.list.d/yarn.list owner=root mode=666
+
+- apt: name=yarn state=present update_cache=yes

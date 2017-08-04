@@ -1,0 +1,8 @@
+---
+- name: Install lua52
+  apt: name={{ item }} state=present
+  with_items:
+    - lua5.2
+    - liblua5.2-dev
+    - lua5.2-socket
+    - lua5.2-cjson

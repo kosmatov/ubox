@@ -1,0 +1,7 @@
+---
+- include: common.yml
+  become: yes
+- include: nginx.yml
+  become: yes
+- include: nodejs.yml
+  become: yes
