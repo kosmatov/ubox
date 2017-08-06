@@ -1,3 +1,9 @@
 ---
-- name: Install Ansible
-  apt: name=ansible state=present
+- name: Add ansible repo
+  shell: apt-add-repository ppa:ansible/ansible
+  become: yes
+
+- apt: update_cache=yes
+  ignore_errors: yes
+
+- apt: name=ansible state=present
